@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+*::selection{
+    color: rgb(244, 242, 239);
+    background-color: black;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: rgb(250, 245, 249);
+}
+
+#nav{
+    width: 100%;
+    /* height: 100px; */
+    position: fixed;
+    z-index: 90;
+    /* background-color:rgb(126, 123, 123) ; */
+    padding: 25px;
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+} 
+
+#nav-part1{
+    background-color: rebeccapurple;
+    height: 82px;
+    overflow: hidden;
+
+}
+#nav-part1 svg{
+    display: block;
+}
+#nav-part2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#link{
+    margin: 0 19px;
+    padding: 10px 12px ;
+}
+
+#link a{
+    margin: 12px;
+    padding: 15px;
+    color: black;
+    font-weight: 200;
+    text-decoration: none;
+    text-transform: uppercase ;
+}
+ #icons{
+    padding:  5px 12px;
+    border-radius: 50px;
+    background-color: rgb(142, 142, 129);
+
+ }
+#icons i{
+    margin: 12px;
+    font-weight: 800;
+    font-size: 20px;
+}
+#cursor{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: rgb(188, 172, 153);
+    transform: translate(-50%,-50%) scale(0);
+}
+#page1{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 12.9vw;
+    padding-left:  2vw;
+    position: relative;
+   
+}
+#page1 h1{
+  font-family: futura;
+  letter-spacing: -8px;
+    font-size: 15.8vw;
+    line-height: 13vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: black;
+}
+
+#video{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: 1vw;
+
+}
+
+#video video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video #play{
+    padding: 3vw 2vw;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: futura;
+    font-size: 1.3vw;
+    opacity: 0;
+    scale: 0;
+
+    position: fixed;
+    border-radius: 50%;
+
+}
+    
+#page2{
+    min-height:  100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    padding: 3vw 1vw;
+    
+    justify-content: space-between;
+    align-items:center ;
+}
+#page2 .elem{
+    /* overflow: hidden; */
+    height: 100%;
+    width: 31%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#page2 .elem .dets{
+    height: 50px;
+    width: 80%;
+    position: absolute;
+    z-index: 9;
+    border-radius: 50px;
+    
+    background-color: palegoldenrod;
+
+
+}
+#page2 .elem img{
+    scale: 1.1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page3{
+    width: 100%;
+    height: 120vh;
+    /* background: rgb(250, 245, 249); */
+    display: flex;
+   position: relative;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-wrap:wrap ;
+
+
+}
+
+.child{
+    height: 54vh;
+    width:38vw ;
+    /* background-color: rebeccapurple; */
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+  
+}
+.child img{
+    height: 100%;
+    /* width: 70%; */
+    
+}
+@media (max-width:600px){
+    #page1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+        
+    }
+    #page1 h1{
+        font-family: futura;
+        letter-spacing: -3px;
+          font-size: 15vw;
+          
+      } 
+      #video{
+        width: 100%;
+        height: 25vh;
+        margin-top: 3vw;
+
+        position: relative;
+        margin-top: 1vw;
+    
+    }  
+    #video #play{
+        padding: 7vw 5.2vw;
+       
+        
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-transform: uppercase;
+        font-family: futura;
+        font-size: 4vw;
+        opacity: 1;
+        scale: 1;
+       font-weight: 800;
+        position: absolute;
+        border-radius: 50%;
+    
+    }
+
+    #page2{
+        min-height:  100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        padding: 8vw 3vw;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center ;
+    }
+    #page2 .elem{
+        overflow: hidden;
+        height: 80vh;
+        width: 100%;
+        margin-bottom:3vw ;
+    }
+    #page2 .elem .dets{
+        height: 40px;
+        width: 80%;
+        position: absolute;
+        z-index: 9;
+        border-radius: 50px;
+        
+        background-color: palegoldenrod;
+    
+    
+    }
+}
